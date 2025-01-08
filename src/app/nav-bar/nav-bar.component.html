@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="/">PronetWatchlist</a>
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    >
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+        class="collapse navbar-collapse"
+        id="navbarNavAltMarkup"
+    >
+      <div class="navbar-nav mr-auto">
+        <a 
+            class="nav-item nav-link" 
+            routerLink="/movies"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+        >Movies</a>
+        <a 
+            class="nav-item nav-link" 
+            routerLink="/series" 
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+        >Tv Shows</a>
+      </div>
+    </div>
+  </nav>

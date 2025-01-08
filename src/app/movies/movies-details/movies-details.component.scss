@@ -1,0 +1,100 @@
+.header {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white;
+
+    .custom-background {
+        background: rgba(0, 0, 0, 0.8);
+        padding: 1rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+
+        .movie-poster {
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .movie-details {
+            .movie-title {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+
+            .genres, .rating, .runtime {
+                font-size: 1rem;
+                color: #ccc;
+                margin-bottom: 0.5rem;
+            }
+
+            .rating {
+                color: gold;
+            }
+
+            .overview {
+                margin-top: 1rem;
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 2rem;
+
+        .movie-poster {
+            max-width: 220px;
+        }
+
+        .movie-details {
+            .movie-title {
+                font-size: 2rem;
+            }
+
+            .genres, .rating, .runtime {
+                font-size: 1.1rem;
+            }
+
+            .overview {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        padding: 2rem;
+
+        .custom-background {
+            padding: 2rem;
+        }
+
+        .movie-details {
+            .movie-title {
+                font-size: 2.5rem;
+            }
+
+            .genres, .rating, .runtime {
+                font-size: 1.2rem;
+            }
+
+            .overview {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,71 @@
+.card {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  
+    .dropdown {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+  
+    .custom-dropdown-toggle {
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 0 5px;
+    }
+  
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+  
+    .card-title {
+      font-size: 1rem;
+      margin: 0 0 5px;
+    }
+  
+    .card-text {
+      font-size: 0.9rem;
+      color: #555;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .card {
+      flex-direction: row; 
+      img {
+        width: 150px;
+        height: 220px;
+      }
+      .card-body {
+        padding: 15px;
+        .card-title {
+          font-size: 1.2rem;
+        }
+        .card-text {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .card {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+  

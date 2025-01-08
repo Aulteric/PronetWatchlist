@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="header">
+      <h2>Popular Movies</h2>
+      
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search movies..." (input)="onSearch($event)">
+      </div>
+    </div>
+  
+    <div class="movies-list">
+      <app-movies-list-item *ngFor="let movie of movies$ | async" [movie]="movie" class="movie-card"></app-movies-list-item>
+    </div>
+  </div>
+  

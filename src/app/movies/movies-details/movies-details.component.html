@@ -1,0 +1,18 @@
+<div class="header"
+    [style.background-image]="'url(https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/'+(movie$ | async)?.backdrop_path+')'">
+    <div class="custom-background">
+        <div class="container">
+            <img class="movie-poster"
+                 src="https://image.tmdb.org/t/p/w220_and_h330_face/{{(movie$ | async)?.poster_path}}"
+                 alt="{{(movie$ | async)?.title}}"
+                 appImageFallback>
+            <div class="movie-details">
+                <h1 class="movie-title">{{(movie$ | async)?.title}} ({{(movie$ | async)?.release_date | date: 'y'}})</h1>
+                <p class="genres">{{ genres | genre }}</p>
+                <p class="rating">Rating: {{ (movie$ | async)?.vote_average | number: '1.1-1' }} / 10</p>
+                <p class="runtime">{{ (movie$ | async)?.runtime }} mins</p>
+                <p class="overview">{{ (movie$ | async)?.overview }}</p>
+            </div>
+        </div>
+    </div>
+</div>
