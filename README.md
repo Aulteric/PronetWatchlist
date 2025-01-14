@@ -6,10 +6,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 To set up the project locally, follow these steps:
 
-Clone the repository: 'git clone [<repository-url>](https://github.com/Aulteric/PronetWatchlist.git)' 
-Navigate to the project directory: 'cd pronetWatchlist'
-Install dependencies: npm install
-Run the App: ng serve
+--Clone the repository: 'git clone [<repository-url>](https://github.com/Aulteric/PronetWatchlist.git)' 
+--Navigate to the project directory: 'cd pronetWatchlist'
+--Install dependencies: npm install
+--Run the App: ng serve
 
 ## Development server
 
