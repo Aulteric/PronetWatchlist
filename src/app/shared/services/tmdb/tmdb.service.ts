@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { IMovie } from '../../interfaces/IMovie';
 import { ISeries } from '../../interfaces/ISeries';
-import { IGetSeriesResponse, IGetMoviesResponse } from '../../interfaces/responses';
+import { IGetSeriesResponse, IGetMoviesResponse, IGetTrendingMediaResponse } from '../../interfaces/responses';
 
 @Injectable({
   providedIn: 'root'
@@ -42,11 +42,22 @@ export class TmdbService {
     return this.httpClient.get<IMovie>(`${this.buildUrl(`/movie/${id}`)}`);
   }
 
-  getSeries(params: any): Observable<IGetSeriesResponse> {
+  getSeries(params?: any): Observable<IGetSeriesResponse> {
     return this.httpClient
       .get<IGetSeriesResponse>(`${this.buildUrl('/discover/tv', params)}`);
   }
+
+
+  searchSeries(params?: any): Observable<IGetSeriesResponse> {
+    return this.httpClient
+      .get<IGetSeriesResponse>(`${this.buildUrl('/search/series', params)}`);
+  }
+
   getSeriesById(id: number): Observable<ISeries> {
     return this.httpClient.get<ISeries>(`${this.buildUrl(`/tv/${id}`)}`);
+  }
+
+  getTrendingMedia(): Observable<IGetTrendingMediaResponse> {
+    return this.httpClient.get<IGetTrendingMediaResponse>(`${this.buildUrl(`/trending/all/day`)}`);
   }
 }

@@ -1,1 +1,14 @@
-<p>series-list works!</p>
+<div class="container">
+    <div class="header">
+      <h2>Popular Series</h2>
+      
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search series..." (input)="onSearch($event)">
+      </div>
+    </div>
+  
+    <div class="series-list">
+      <app-media-card *ngFor="let show of series$ | async" [media]="show" class="series-card" (onItemClick)="redirect($event)"></app-media-card>
+    </div>
+  </div>
+  

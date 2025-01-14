@@ -1,5 +1,6 @@
 import { IMovie } from './IMovie';
 import { ISeries } from './ISeries';
+import { ITrendingMedia } from './ITrendingMedia';
 
 export interface IGetMoviesResponse {
     page: number;
@@ -13,4 +14,11 @@ export interface IGetSeriesResponse {
     total_results: number;
     total_pages: number;
     results: ISeries[];
+}
+
+export interface IGetTrendingMediaResponse {
+    page: number;
+    total_results: number;
+    total_pages: number;
+    results: ITrendingMedia[];
 }

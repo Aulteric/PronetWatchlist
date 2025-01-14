@@ -1,0 +1,25 @@
+<div class="container-home">
+    <section class="header">
+      <div class="header-content">
+        <h2><strong>Welcome.</strong></h2>
+        <h3>Millions of movies and TV shows to discover. Explore now.</h3>
+      </div>
+    </section>
+  
+    <section class="trending">
+      <div class="trending-header">
+        <h4>Trending Movies and Shows</h4>
+      </div>
+      <div class="trending-list">
+          <div class="trending-item" 
+          *ngFor="let media of trendingMedia"
+          (click)="redirectToMedia(media.media_type, media.id)">
+          <img 
+          src="https://image.tmdb.org/t/p/w150_and_h225_bestv2/{{media.poster_path}}"
+          appImageFallback/>
+          <p class="rating">Rating: {{ media?.vote_average | number: '1.1-1' }} / 10</p>
+          </div>
+      </div>
+    </section>
+  </div>
+  

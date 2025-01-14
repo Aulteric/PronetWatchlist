@@ -1,1 +1,21 @@
-<p>series-details works!</p>
+<div class="header"
+    [style.background-image]="'url(https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/' + show?.backdrop_path+')'">
+    <div class="custom-background">
+        <div class="container">
+            <img class="series-poster"
+                 src="https://image.tmdb.org/t/p/w220_and_h330_face/{{show?.poster_path}}"
+                 alt="{{show?.name}}"
+                 appImageFallback>
+            <div class="series-details">
+                <h1 class="series-title">{{show?.name}} ({{show?.first_air_date | date: 'y'}})</h1>
+                <p class="rating">Rating: {{ show?.vote_average | number: '1.1-1' }} / 10</p>
+                <p class="overview">{{ show?.overview }}</p>
+            </div>
+            <ng-container *ngIf="show">
+                <button [ngClass]="isFavorite ? 'btn btn-danger btn-sm' : 'btn btn-success btn-sm'" (click)="toggleFavorite(show)">
+                    {{ isFavorite ? 'Remove from Favorites' : 'Add to Favorites' }}
+                </button>
+            </ng-container>
+        </div>
+    </div>
+</div>

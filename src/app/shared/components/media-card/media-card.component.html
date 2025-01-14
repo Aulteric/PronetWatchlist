@@ -1,0 +1,11 @@
+<div class="card" (click)="onClick()" *ngIf="media">
+    <img 
+      class="card-img-top" 
+      src="https://image.tmdb.org/t/p/w220_and_h330_face/{{media.poster_path}}"
+      alt="getTitle(media)" 
+      appImageFallback>
+    <div class="card-body">
+      <h5 class="card-title">{{ getTitle(media) }}</h5>
+      <p class="card-text">{{ getReleaseDate(media) }}</p>
+    </div>
+  </div>

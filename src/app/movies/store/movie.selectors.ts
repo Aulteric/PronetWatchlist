@@ -20,13 +20,7 @@ export const selectSelectedMovie = createSelector(
     (state: IMoviesState) => state.selectedMovie
 );
 
-export const selectFavorites = createSelector(
+export const selectMovieFavorites = createSelector(
     selectMoviesFeature,
     (state: IMoviesState) => state.favorites
-  );
-  
-export const isFavorite = (movieId: number) =>
-createSelector(
-    selectMoviesFeature,
-    (state: IMoviesState) => state.favorites.some(movie => movie.id === movieId)
 );

@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { MoviesRoutingModule } from './movies-routing.module';
 import { MoviesListComponent } from './movies-list/movies-list.component';
 import { MoviesDetailsComponent } from './movies-details/movies-details.component';
-import { MoviesListItemComponent } from './movies-list-item/movies-list-item.component';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { MovieEffects } from './store/movie.effects';
@@ -15,7 +14,6 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     MoviesListComponent,
     MoviesDetailsComponent,
-    MoviesListItemComponent
   ],
   imports: [
     CommonModule,

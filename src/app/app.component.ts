@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavBarComponent } from "./nav-bar/nav-bar.component";
 
 @Component({
   selector: 'app-root',
@@ -7,5 +6,4 @@ import { NavBarComponent } from "./nav-bar/nav-bar.component";
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'pronetWatchlist';
 }

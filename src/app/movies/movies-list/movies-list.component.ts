@@ -5,6 +5,7 @@ import { IMoviesState } from '../store/movie.reducers';
 import { select, Store } from '@ngrx/store';
 import * as fromMovieActions from '../store/movie.actions';
 import { selectMovies, selectError } from '../store/movie.selectors';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movies-list',
@@ -16,7 +17,8 @@ export class MoviesListComponent {
   loadError$: Observable<string>;
   
   constructor(
-    private store: Store<IMoviesState>
+    private store: Store<IMoviesState>,
+    private router: Router
   ) { 
     this.movies$ = this.store.pipe(select(selectMovies));
     this.loadError$ = this.store.pipe(select(selectError));
@@ -37,6 +39,13 @@ export class MoviesListComponent {
     } else {
       this.store.dispatch(fromMovieActions.loadMovies());
     }
+  }
+
+  redirect(id: number): void {
+    if(id)
+    {
+      this.router.navigate(['/movies', id]);
     }
+  }
 
 }

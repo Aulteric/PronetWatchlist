@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="header">
+      <h2>Favorite Media</h2>
+    </div>
+  
+    <div class="favorites-list">
+      <app-media-card 
+      *ngFor="let favorite of favorites$ | async" 
+      [media]="favorite" 
+      class="favorite-card">
+    </app-media-card>
+    </div>
+  </div>
+  
